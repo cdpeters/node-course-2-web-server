@@ -56,6 +56,12 @@ app.get('/bad', (req, res) => {
   });
 });
 
-app.listen(port, () => {
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page'
+  });
+});
+
+app.listen(3000, () => {
   console.log(`Server is up on port ${port}`);
 });
